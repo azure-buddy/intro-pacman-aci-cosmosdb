@@ -1,0 +1,18 @@
+[
+    {
+        "key": {
+            "keys": [
+                "_id"
+            ]
+        },
+        "options": null
+    },
+    {
+        "key": {
+            "keys": [
+                "score"
+            ]
+        },
+        "options": null
+    }
+]

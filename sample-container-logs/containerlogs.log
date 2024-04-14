@@ -1,0 +1,85 @@
+> pacman@0.0.1 start /usr/src/app
+> node .
+
+Listening on port 8080
+Connected to database server successfully
+Time:  Sat Apr 13 2024 10:04:23 GMT+0000 (UTC)
+[GET /loc/metadata]
+[getHost]
+HOST: SandboxHost-638485993802623595
+getCloudMetadata
+getK8sCloudMetadata
+Querying undefined for cloud data
+{ Error: ENOENT: no such file or directory, open '/var/run/secrets/kubernetes.io/serviceaccount/token'
+    at Error (native)
+    at Object.fs.openSync (fs.js:642:18)
+    at Object.fs.readFileSync (fs.js:510:33)
+    at getK8sCloudMetadata (/usr/src/app/routes/location.js:347:27)
+    at getCloudMetadata (/usr/src/app/routes/location.js:32:5)
+    at /usr/src/app/routes/location.js:17:5
+    at Layer.handle [as handle_request] (/usr/src/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/usr/src/app/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/usr/src/app/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/usr/src/app/node_modules/express/lib/router/layer.js:95:5)
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/var/run/secrets/kubernetes.io/serviceaccount/token' }
+problem with request: getaddrinfo ENOTFOUND kubernetes.default.svc kubernetes.default.svc:443
+getAWSCloudMetadata
+Time:  Sat Apr 13 2024 10:04:40 GMT+0000 (UTC)
+[GET /user/id]
+failed to insert new user ID err = { MongoError: Error=2, Details='Response status code does not indicate success: BadRequest (400); Substatus: 1028; ActivityId: 7f1b1efc-0abf-42a7-bb17-964f9525d6c5; Reason: (Message: {"Errors":["Your account is currently configured with a total throughput limit of 1000 RU\/s. This operation failed because it would have increased the total throughput to 1600 RU\/s. See https:\/\/aka.ms\/cosmos-tp-limit for more information."]}
+ActivityId: 7f1b1efc-0abf-42a7-bb17-964f9525d6c5, Request URI: /apps/5ffd515d-c003-471f-99a0-5493d2e48982/services/114c59a7-0925-415b-bd4f-144d77d99f50/partitions/7dbfe306-ceb8-40db-a314-26d82e15ffdf/replicas/133574304008530167p, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Cosmos.Tracing.TraceData.ClientSideRequestStatisticsTraceDatum, Windows/10.0.20348 cosmos-netstandard-sdk/3.18.0);
+    at Function.MongoError.create (/usr/src/app/node_modules/mongodb-core/lib/error.js:31:11)
+    at /usr/src/app/node_modules/mongodb-core/lib/connection/pool.js:497:72
+    at authenticateStragglers (/usr/src/app/node_modules/mongodb-core/lib/connection/pool.js:443:16)
+    at Connection.messageHandler (/usr/src/app/node_modules/mongodb-core/lib/connection/pool.js:477:5)
+    at TLSSocket.<anonymous> (/usr/src/app/node_modules/mongodb-core/lib/connection/connection.js:333:22)
+    at emitOne (events.js:96:13)
+    at TLSSocket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at TLSSocket.Readable.push (_stream_readable.js:134:10)
+    at TLSWrap.onread (net.js:559:20)
+  name: 'MongoError',
+  message: 'Error=2, Details=\'Response status code does not indicate success: BadRequest (400); Substatus: 1028; ActivityId: 7f1b1efc-0abf-42a7-bb17-964f9525d6c5; Reason: (Message: {"Errors":["Your account is currently configured with a total throughput limit of 1000 RU\\/s. This operation failed because it would have increased the total throughput to 1600 RU\\/s. See https:\\/\\/aka.ms\\/cosmos-tp-limit for more information."]}\r\nActivityId: 7f1b1efc-0abf-42a7-bb17-964f9525d6c5, Request URI: /apps/5ffd515d-c003-471f-99a0-5493d2e48982/services/114c59a7-0925-415b-bd4f-144d77d99f50/partitions/7dbfe306-ceb8-40db-a314-26d82e15ffdf/replicas/133574304008530167p, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Cosmos.Tracing.TraceData.ClientSideRequestStatisticsTraceDatum, Windows/10.0.20348 cosmos-netstandard-sdk/3.18.0);',
+  ok: 0,
+  errmsg: 'Error=2, Details=\'Response status code does not indicate success: BadRequest (400); Substatus: 1028; ActivityId: 7f1b1efc-0abf-42a7-bb17-964f9525d6c5; Reason: (Message: {"Errors":["Your account is currently configured with a total throughput limit of 1000 RU\\/s. This operation failed because it would have increased the total throughput to 1600 RU\\/s. See https:\\/\\/aka.ms\\/cosmos-tp-limit for more information."]}\r\nActivityId: 7f1b1efc-0abf-42a7-bb17-964f9525d6c5, Request URI: /apps/5ffd515d-c003-471f-99a0-5493d2e48982/services/114c59a7-0925-415b-bd4f-144d77d99f50/partitions/7dbfe306-ceb8-40db-a314-26d82e15ffdf/replicas/133574304008530167p, RequestStats: , SDK: Microsoft.Azure.Documents.Common/2.14.0, Microsoft.Azure.Cosmos.Tracing.TraceData.ClientSideRequestStatisticsTraceDatum, Windows/10.0.20348 cosmos-netstandard-sdk/3.18.0);',
+  code: 2,
+  codeName: 'BadValue' }
+Time:  Sat Apr 13 2024 10:04:58 GMT+0000 (UTC)
+[POST /highscores] body = { name: 'azurebuddy',
+  cloud: 'unknown',
+  zone: 'unknown',
+  host: 'unknown',
+  score: '140',
+  level: '1' }  host = pacman-aci-demo.ema5asetfaguf9a9.westus.azurecontainer.io:8080  user-agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36  referer = http://pacman-aci-demo.ema5asetfaguf9a9.westus.azurecontainer.io:8080/
+Successfully inserted highscore
+Time:  Sat Apr 13 2024 10:05:00 GMT+0000 (UTC)
+[GET /highscores/list]
+Time:  Sat Apr 13 2024 10:06:23 GMT+0000 (UTC)
+[GET /user/stats]
+Time:  Sat Apr 13 2024 10:06:26 GMT+0000 (UTC)
+[GET /highscores/list]
+Time:  Sat Apr 13 2024 10:06:33 GMT+0000 (UTC)
+[GET /user/stats]
+problem with request: connect ETIMEDOUT 169.254.169.254:80
+getAzureCloudMetadata
+Time:  Sat Apr 13 2024 10:07:05 GMT+0000 (UTC)
+[POST /highscores] body = { name: 'arnold',
+  cloud: 'unknown',
+  zone: 'unknown',
+  host: 'unknown',
+  score: '760',
+  level: '1' }  host = pacman-aci-demo.ema5asetfaguf9a9.westus.azurecontainer.io:8080  user-agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36  referer = http://pacman-aci-demo.ema5asetfaguf9a9.westus.azurecontainer.io:8080/
+Successfully inserted highscore
+Time:  Sat Apr 13 2024 10:07:06 GMT+0000 (UTC)
+[GET /highscores/list]
+problem with request: connect ETIMEDOUT 169.254.169.254:80
+getGCPCloudMetadata
+problem with request: getaddrinfo ENOTFOUND metadata.google.internal metadata.google.internal:80
+getOpenStackCloudMetadata
+problem with request: connect ETIMEDOUT 169.254.169.254:80
+CLOUD: unknown
+ZONE: unknown
+HOST: SandboxHost-638485993802623595

@@ -1,0 +1,4 @@
+# Save this file as .env
+# Can be sourced using `source .env`
+
+export MONGO_AUTH_PWD=<<My API KEY / Token>>

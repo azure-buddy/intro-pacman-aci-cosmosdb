@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "pacman"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "locationName": {
+            "value": "East US"
+        },
+        "defaultExperience": {
+            "value": "Azure Cosmos DB for MongoDB API"
+        },
+        "isZoneRedundant": {
+            "value": "false"
+        },
+        "pairedLocation": {
+            "value": "westus"
+        },
+        "pairedLocationName": {
+            "value": "West US"
+        }
+    }
+}

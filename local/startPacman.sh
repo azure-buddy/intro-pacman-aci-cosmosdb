@@ -1,0 +1,1 @@
+docker run -it -d --rm --name pac-man --network sandbox -p 8080:8080 --env MONGO_SERVICE_HOST=pacman.mongo.cosmos.azure.com --env MONGO_DATABASE=highscore --env MY_MONGO_PORT=10255 --env MONGO_AUTH_USER=pacman --env MONGO_AUTH_PWD=${MONGO_AUTH_PWD} --env MONGO_USE_SSL=true --env MONGO_VALIDATE_SSL=false avwsolutions/pacman-aci-demo
