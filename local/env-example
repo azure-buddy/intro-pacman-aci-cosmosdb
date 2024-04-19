@@ -2,3 +2,4 @@
 # Can be sourced using `source .env`
 
 export MONGO_AUTH_PWD=<<My API KEY / Token>>
+export ACCESS_KEY=<<My STG ACCESS KEY>>

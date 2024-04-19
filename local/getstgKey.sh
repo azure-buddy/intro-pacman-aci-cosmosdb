@@ -1,0 +1,1 @@
+az storage account keys list -g my-playground-sandbox -n 123pacman

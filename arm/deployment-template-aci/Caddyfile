@@ -1,0 +1,3 @@
+pacman-aci-demo.ema5asetfaguf9a9.westus.azurecontainer.io {
+    reverse_proxy http://localhost:8080
+}
