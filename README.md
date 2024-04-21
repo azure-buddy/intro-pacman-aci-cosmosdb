@@ -1,6 +1,6 @@
 # intro-pacman-aci-cosmosdb
 
-<img src="https://raw.githubusercontent.com/azure-buddy/intro-pacman-aci-cosmosdb/main/featured.png" alt="Blog header">
+<img src="https://raw.githubusercontent.com/azure-buddy/intro-pacman-aci-cosmosdb/main/images/featured.png" alt="Blog header">
 
 Introduction material that shows how to host a Retro game like Pac-Man using Azure Container Instance (ACI) and Azure Cosmos DB. For instructions visit the corresponding blog at the :point_right: [Azure Buddy Website](https://azurebuddy.online/tips-tricks/intro-aci-cosmosdb/).
 
